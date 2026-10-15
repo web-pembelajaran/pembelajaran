@@ -120,6 +120,30 @@
        </ol>
 </div>
 </section>
+    <!-- ========================================== -->
+    <!-- 4. RUANG KUIS INTERAKTIF -->
+    <!-- ========================================== -->
+    <section id="kuis" class="tab-content">
+        <h2>Kuis Kilat Informatika</h2>
+        <p>Uji pemahamanmu setelah membaca rangkuman materi di atas!</p>
+        <div id="quizContainer" style="text-align: left; margin-top: 20px;">
+            <p><strong>Soal:</strong> Memecah masalah kompleks menjadi bagian-bagian kecil yang lebih sederhana disebut dengan teknik...</p>
+            <form id="quizForm" style="margin-top: 10px;">
+                <label><input type="radio" name="jawaban" value="A"> A. Abstraksi</label><br>
+                <label><input type="radio" name="jawaban" value="B"> B. Dekomposisi</label><br>
+                <label><input type="radio" name="jawaban" value="C"> C. Algoritma</label><br>
+                <label><input type="radio" name="jawaban" value="D"> D. Pengenalan Pola</label><br><br>
+                <button type="submit">Periksa Jawaban</button>
+            </form>
+            <p id="kuisRespon" style="margin-top:15px; font-weight: bold;"></p>
+            
+            <div id="papanSkor" style="margin-top: 20px; padding: 10px; border: 1px dashed #ccc; text-align: center; display: none;">
+                <p style="font-size: 16px;">Nilai Ujian Kamu: <span id="nilaiAngka" style="font-size: 20px; font-weight: bold;">0</span> / 100</p>
+                <button type="button" onclick="ulangKuis()" style="background-color: #6c757d; padding: 5px 10px; margin-top: 10px; font-size: 12px; width: auto;">Coba Lagi</button>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2026 E-Learning SMAN 13 Garut. All Rights Reserved.</p>
     </footer>
