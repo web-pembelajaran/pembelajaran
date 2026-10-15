@@ -1,0 +1,199 @@
+/* 1. Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f4f8; /* Warna latar belakang abu kebiruan yang lembut */
+}
+
+/* 2. Header & Navigasi */
+header {
+    background-color: #004080; /* Biru khas e-learning */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 14px;
+    color: #ffeb3b; /* Kuning cerah untuk sub-judul */
+    margin-top: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* 3. Pengaturan Kotak Konten (Section) */
+section {
+    padding: 35px;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 12px; /* Sudut kotak lebih melengkung halus */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Bayangan lembut */
+}
+
+section h2 {
+    color: #004080;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffeb3b;
+    padding-bottom: 8px;
+    font-size: 22px;
+}
+
+/* 4. Pengaturan Formulir & Pilihan Kuis */
+form input[type="text"], form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form label {
+    display: block;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+form label:hover {
+    background: #e6f2ff; /* Berubah biru muda saat kursor di atas pilihan kuis */
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* 5. Tombol */
+button {
+    background-color: #004080;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%; /* Tombol melebar penuh agar rapi */
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #002d59;
+}
+
+/* 6. Footer Kaki Halaman */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #1a1a1a;
+    color: #999;
+    font-size: 13px;
+    margin-top: 50px;
+}
+/* Trik CSS untuk menyembunyikan halaman yang tidak aktif */
+.tab-content {
+    display: none;
+}
+.tab-content.active-tab {
+    display: block;
+}
+/* ======================================================= */
+/* FIX: MENGEMBALIKAN KOTAK LOGIN & MENATA MENU KE KANAN ATAS */
+/* ======================================================= */
+
+/* Membuat header menjadi barisan mendatar (Sekolah di kiri, Menu di kanan atas) */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+    /* Trik flexbox agar konten memisah ke kiri dan kanan */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+header p {
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+/* Menata tombol menu agar berjejer rapi di kanan atas */
+nav ul {
+    margin-top: 0; /* Menghilangkan jarak atas yang bikin turun */
+    display: flex;
+    gap: 20px;
+}
+
+/* Mengembalikan kotak login & daftar agar sewarna dengan kotak Profil/Absensi */
+#halaman-login, #buat-akun {
+    display: none; /* Sembunyikan jika tidak aktif */
+    background: white;
+    padding: 35px;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Memastikan halaman yang aktif tetap muncul dengan normal */
+#halaman-login.active-tab, #buat-akun.active-tab {
+    display: block; 
+}
+
+/* Merapikan form di dalam kotak */
+#halaman-login form, #buat-akun form {
+    max-width: 500px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+}

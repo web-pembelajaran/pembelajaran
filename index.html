@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA NEGERI 13 GARUT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>SMA NEGERI 13 GARUT</h1>
+            <p>Kompeten, Berkarakter, Siap kerja</p>
+        </div>
+                <nav>
+            <ul>
+                <!-- Memberikan ID agar bisa disembunyikan oleh JavaScript setelah login -->
+                <li id="menu-profil-sekolah"><a href="#" onclick="bukaHalaman(event, 'profil')">Profil Sekolah</a></li>
+                <li id="menu-login"><a href="#" onclick="bukaHalaman(event, 'halaman-login')">Masuk (Login)</a></li>
+                
+                <!-- Menu belajar di bawah ini kita beri style="display: none;" agar tersembunyi rapat di awal -->
+                <li id="menu-absensi" style="display: none;"><a href="#" onclick="bukaHalaman(event, 'absensi')">Absensi Siswa</a></li>
+                <li id="menu-materi" style="display: none;"><a href="#" onclick="bukaHalaman(event, 'materi')">Materi Informatika</a></li>
+                <li id="menu-kuis" style="display: none;"><a href="#" onclick="bukaHalaman(event, 'kuis')">Kuis Interaktif</a></li>
+                <li id="menu-logout" style="display: none;"><a href="#" onclick="logoutSiswa(event)" style="color: #ff4d4d;">Keluar</a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <section id="profil" class="tab-content active-tab">
+        <h2>Profil & Visi Misi Sekolah</h2>
+        <div class="sekolah-info" style="text-align: left;">
+            <img src="sman13garut.jpg" alt="Gedung SMAN 13 Garut" style="width:100%; max-width:600px; display:block; margin:0 auto 20px auto; border-radius:8px;">
+            <h3 style="color: #004080; margin-bottom: 5px;">SMA NEGERI 13 GARUT</h3>
+            <p style="margin-bottom: 25px; line-height: 1.7;">Seiring dengan penguasaan teknologi untuk dimanfaatkan sebaik mungkin, sehingga menciptakan iklim kondusif dalam ranah keilmuan. Dengan konsep yang kontekstual dan efektif, kami mengedepankan nilai-nilai pendidikan yang tertuang dalam visi misi SMK YPPT GARUT.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 25px;">
+
+            <h3 style="color: #004080; margin-bottom: 10px; font-size: 18px;">Visi Sekolah</h3>
+            <div style="margin-bottom: 25px; color: #555; padding-left: 10px; border-left: 3px solid #ffeb3b;">
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>Menjadikan generasi penerus bangsa yang mempunyai kemampuan berpikir taktis, kreatif, berkompeten dalam teknik, serta berakhlak mulia.</li>
+                    <li>Menghasilkan lulusan yang handal terutama dalam bidang keahlian komputerisasi dan teknologi informasi.</li>
+                    <li>Menciptakan lingkungan sekolah yang serasi, suasana kerja yang harmonis dan produktif untuk menumbuhkembangkan budaya tertib, kerja keras, dan efisien.</li>
+                </ul>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 25px;">
+
+            <h3 style="color: #004080; margin-bottom: 10px; font-size: 18px;">Misi Sekolah</h3>
+            <div style="color: #555; padding-left: 10px; border-left: 3px solid #004080;">
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>Menciptakan lulusan SMK yang beriman, bertakwa, berakhlakul karimah, dan menjadi manusia produktif.</li>
+                    <li>Membekali peserta didik dengan kemampuan bekerja sama secara efektif dan efisien atau bekerja secara mandiri untuk mengisi peluang kerja di tingkat menengah.</li>
+                    <li>Menguasai teknologi informasi serta pemanfaatannya yang kontekstual dan efektif untuk kemajuan dunia pendidikan.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="absensi" class="tab-content">
+        <h2>Absensi Kehadiran Kelas</h2>
+        <p style="margin-bottom: 20px;">Silakan isi daftar hadir Anda sebelum memulai pelajaran hari ini:</p>
+        <form id="attendanceForm">
+            <input type="text" id="absensiNama" placeholder="Nama Lengkap Siswa" required><br><br>
+                       <select id="absensiKelas" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 20px;" required>
+                <option value="">-- Pilih Kelas --</option>
+                <!-- KELAS X -->
+                <option value="X-1">X-1</option>
+                <option value="X-2">X-2</option>
+                <option value="X-3">X-3</option>
+                <option value="X-4">X-4</option>
+                <option value="X-5">X-5</option>
+                <option value="X-6">X-6</option>
+                <option value="X-7">X-7</option>
+                <option value="X-8">X-8</option>
+                <option value="X-9">X-9</option>
+                <option value="X-10">X-10</option>
+                <option value="X-11">X-11</option>
+                <option value="X-12">X-12</option>
+                <!-- KELAS XI -->
+                <option value="XI-1">XI-1</option>
+                <option value="XI-2">XI-2</option>
+                <option value="XI-3">XI-3</option>
+                <option value="XI-4">XI-4</option>
+                <option value="XI-5">XI-5</option>
+                <option value="XI-6">XI-6</option>
+                <option value="XI-7">XI-7</option>
+                <option value="XI-8">XI-8</option>
+                <option value="XI-9">XI-9</option>
+                <option value="XI-10">XI-10</option>
+                <option value="XI-11">XI-11</option>
+                <option value="XI-12">XI-12</option>
+                <!-- KELAS XII -->
+                <option value="XII-1">XII-1</option>
+                <option value="XII-2">XII-2</option>
+                <option value="XII-3">XII-3</option>
+                <option value="XII-4">XII-4</option>
+                <option value="XII-5">XII-5</option>
+                <option value="XII-6">XII-6</option>
+                <option value="XII-7">XII-7</option>
+                <option value="XII-8">XII-8</option>
+                <option value="XII-9">XII-9</option>
+                <option value="XII-10">XII-10</option>
+                <option value="XII-11">XII-11</option>
+                <option value="XII-12">XII-12</option>
+            </select>
+
+            <select id="statusHadir" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+                <option value="">-- Pilih Status Kehadiran --</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Izin">Izin</option>
+                <option value="Sakit">Sakit</option>
+            </select><br><br>
+            <button type="submit">Kirim Absen</button>
+        </form>
+        <p id="absensiRespon" style="margin-top:15px; color: green; font-weight: bold;"></p>
+    </section>
+<section id="halaman-login" class="tab-content">
+        <h2>Login</h2>
+        <p style="margin-bottom: 20px;">Silakan masuk menggunakan NISN dan Password Anda:</p>
+        <form id="loginForm">
+            <input type="text" id="loginUser" placeholder="Masukkan NISN Siswa" required><br><br>
+            <input type="password" id="loginPass" placeholder="Masukkan Password" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+        <p id="loginRespon" style="margin-top:15px; color: red; font-weight: bold;"></p>
+        <p style="margin-top: 20px; font-size: 14px;">Belum punya akun? <a href="#" onclick="bukaHalaman(event, 'buat-akun')" style="color: #004080; font-weight: bold; text-decoration: none;">Buat Akun Disini</a></p>
+    </section>
+
+    <section id="buat-akun" class="tab-content">
+        <h2>Pendaftaran Akun</h2>
+        <p>Buat akun baru untuk mulai mengakses sistem pembelajaran</p>
+        <form id="registerForm">
+            <input type="number" id="regNisn" placeholder="Masukkan NISN Siswa" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;" required><br><br>
+            <input type="text" id="regNama" placeholder="Nama Lengkap Siswa" required><br><br>
+            <input type="password" id="regPassword" placeholder="Buat Password Akun" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;" required><br><br>
+            <button type="submit">Daftar Akun Baru</button>
+        </form>
+        <p id="registerRespon" style="margin-top:15px; color: green; font-weight: bold;"></p>
+        <p style="margin-top: 15px; font-size: 14px;">Sudah punya akun? <a href="#" onclick="bukaHalaman(event, 'halaman-login')" style="color: #004080; font-weight: bold; text-decoration: none;">Login Disini</a></p>
+    </section>
+
+    <section id="materi" class="tab-content">
+        <h2>Materi Belajar: Berpikir Komputasional</h2>
+        <div style="text-align: left; padding: 10px;">
+            <p>Hari ini kita mempelajari landasan utama ilmu Informatika, yaitu <strong>Berpikir Komputasional (Computational Thinking)</strong>. Ada 4 pilar utama yang wajib dipahami:</p>
+            <ol style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                <li><strong>Dekomposisi:</strong> Memecah masalah besar menjadi bagian-bagian kecil yang lebih mudah diselesaikan.</li>
+                <li><strong>Pengenalan Pola:</strong> Mencari kesamaan atau tren di dalam masalah tersebut.</li>
+                <li><strong>Abstraksi:</strong> Fokus hanya pada informasi penting dan mengabaikan detail yang tidak relevan.</li>
+                <li><strong>Algoritma:</strong> Menyusun langkah-langkah logis dan berurutan untuk menyelesaikan masalah.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="kuis" class="tab-content">
+        <h2>Kuis Kilat Informatika</h2>
+        <p>Uji pemahamanmu setelah membaca materi di atas!</p>
+        <div id="quizContainer" style="text-align: left; margin-top: 20px;">
+            <p><strong>Soal:</strong> Memecah masalah kompleks menjadi bagian-bagian kecil yang lebih sederhana disebut dengan teknik...</p>
+            <form id="quizForm" style="margin-top: 10px;">
+                <label><input type="radio" name="jawaban" value="A"> A. Abstraksi</label><br>
+                <label><input type="radio" name="jawaban" value="B"> B. Dekomposisi</label><br>
+                <label><input type="radio" name="jawaban" value="C"> C. Algoritma</label><br>
+                <label><input type="radio" name="jawaban" value="D"> D. Pengenalan Pola</label><br><br>
+                <button type="submit">Periksa Jawaban</button>
+            </form>
+            <p id="kuisRespon" style="margin-top:15px; font-weight: bold;"></p>
+        </div>
+    </section>
+
+     <section id="buat-akun" class="tab-content">
+        <h2>Pendaftaran Akun PEMBELAJARAN</h2>
+        <p style="margin-bottom: 20px;">Silakan buat akun siswa baru untuk mengakses rapor digital dan materi premium:</p>
+        
+        <form id="registerForm">
+            <input type="text" id="regNama" placeholder="Nama Lengkap Siswa" required><br><br>
+            <input type="email" id="regEmail" placeholder="Alamat Email Aktif" required><br><br>
+            <input type="password" id="regPassword" placeholder="Buat Password Akun" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px;" required><br><br>
+            
+            <button type="submit">Daftar Akun Baru</button>
+        </form>
+        <p id="registerRespon" style="margin-top:15px; color: green; font-weight: bold;"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pembelajaran SMA NEGERI 13 Garut. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
