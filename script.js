@@ -27,13 +27,11 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         alert(`Selamat datang kembali di kelas Informatika, ${akunAsliNama}!`);
         responLogin.innerText = ""; 
         
-        // 1. Membuka menu privat siswa di kanan atas
         document.getElementById('menu-absensi').style.display = 'inline-block';
         document.getElementById('menu-materi').style.display = 'inline-block';
         document.getElementById('menu-kuis').style.display = 'inline-block';
         document.getElementById('menu-logout').style.display = 'inline-block';
         
-        // 2. KODE MENYEMBUNYIKAN PROFIL SEKOLAH & TOMBOL LOGIN UTAMA
         document.getElementById('menu-login').style.display = 'none';
         
         pindahKeHalamanLokal('materi');
@@ -48,14 +46,11 @@ function logoutSiswa(event) {
     event.preventDefault();
     alert('Anda telah keluar dari sistem e-learning.');
     
-    // Mengunci kembali menu privat siswa
     document.getElementById('menu-absensi').style.display = 'none';
     document.getElementById('menu-materi').style.display = 'none';
     document.getElementById('menu-kuis').style.display = 'none';
     document.getElementById('menu-logout').style.display = 'none';
     
-    // KODE MEMUNCULKAN KEMBALI PROFIL SEKOLAH & TOMBOL LOGIN
-    document.getElementById('menu-profil-sekolah').style.display = 'inline-block';
     document.getElementById('menu-login').style.display = 'inline-block';
     
     pindahKeHalamanLokal('profil');
