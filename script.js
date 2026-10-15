@@ -34,7 +34,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         document.getElementById('menu-logout').style.display = 'inline-block';
         
         // 2. KODE MENYEMBUNYIKAN PROFIL SEKOLAH & TOMBOL LOGIN UTAMA
-        document.getElementById('menu-profil-sekolah').style.display = 'none';
         document.getElementById('menu-login').style.display = 'none';
         
         pindahKeHalamanLokal('materi');
