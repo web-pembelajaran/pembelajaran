@@ -12,7 +12,6 @@ body {
     background-color: #f0f4f8;
 }
 
-/* 2. Header & Navigasi (Mendatar ke Kanan Atas - Anti Bentrok) */
 header {
     background-color: #004080;
     color: white;
@@ -54,7 +53,6 @@ nav ul li a:hover {
     color: #ffeb3b;
 }
 
-/* 3. Pengaturan Kotak Konten (Section) */
 section {
     padding: 35px;
     max-width: 800px;
@@ -72,7 +70,6 @@ section h2 {
     font-size: 22px;
 }
 
-/* 4. Pengaturan Formulir Input (Termasuk Input Angka/NISN) */
 form input[type="text"], 
 form input[type="email"], 
 form input[type="number"], 
@@ -132,7 +129,6 @@ footer {
     margin-top: 50px;
 }
 
-/* 7. Trik Menyembunyikan Halaman Tab */
 .tab-content {
     display: none;
 }
@@ -141,7 +137,6 @@ footer {
     display: block;
 }
 
-/* Merapikan form khusus di dalam kotak login & daftar */
 #halaman-login form, #buat-akun form {
     max-width: 500px;
     margin: 20px auto 0 auto;
