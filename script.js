@@ -18,7 +18,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const inputNisn = document.getElementById('loginUser').value.trim();
     const inputPass = document.getElementById('loginPass').value;
     const responLogin = document.getElementById('loginRespon');
-    
     const akunAsliNisn = localStorage.getItem('savedNisn');
     const akunAsliNama = localStorage.getItem('savedUsername');
     const akunAsliPass = localStorage.getItem('savedPassword');
@@ -109,8 +108,4 @@ function ulangKuis() {
     document.getElementById('quizForm').reset();
     document.getElementById('kuisRespon').innerText = "";
     document.getElementById('papanSkor').style.display = "none";
-}
-
-function unduhModul() {
-    alert("⚡ Menghubungkan ke server lokal...\nModul Pembelajaran Informatika 'Berpikir Komputasional.pdf' berhasil diunduh ke komputer Anda!");
 }
