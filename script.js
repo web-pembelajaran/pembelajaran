@@ -26,14 +26,14 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     if (inputNisn === akunAsliNisn && inputPass === akunAsliPass) {
         alert(`Selamat datang kembali di kelas Informatika, ${akunAsliNama}!`);
         responLogin.innerText = ""; 
-        
+        document.getElementById('absensiNama').value = akunAsliNama;
+        document.getElementById('absensiNama').readOnly = true; 
+        document.getElementById('menu-absensi').style.style.display = 'inline-block';
         document.getElementById('menu-absensi').style.display = 'inline-block';
         document.getElementById('menu-materi').style.display = 'inline-block';
         document.getElementById('menu-kuis').style.display = 'inline-block';
         document.getElementById('menu-logout').style.display = 'inline-block';
-        
         document.getElementById('menu-login').style.display = 'none';
-        
         pindahKeHalamanLokal('materi');
     } else {
         responLogin.style.color = "red";
