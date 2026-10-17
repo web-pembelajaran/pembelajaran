@@ -28,7 +28,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         responLogin.innerText = ""; 
         document.getElementById('absensiNama').value = akunAsliNama;
         document.getElementById('absensiNama').readOnly = true; 
-        document.getElementById('menu-absensi').style.style.display = 'inline-block';
         document.getElementById('menu-absensi').style.display = 'inline-block';
         document.getElementById('menu-materi').style.display = 'inline-block';
         document.getElementById('menu-kuis').style.display = 'inline-block';
